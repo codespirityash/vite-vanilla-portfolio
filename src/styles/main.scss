@@ -17,6 +17,7 @@ body {
 }
 
 header {
+  position: relative;
   background-color: $header-bg;
   padding: 16px;
   text-align: center;
@@ -25,22 +26,66 @@ header {
     color: $header-title-color;
   }
 
-  nav ul {
-    list-style: none;
-    padding: 0;
+  #menu-toggle {
+    display: none;
+    font-size: 24px;
+    background: none;
+    border: none;
+    color: $header-title-color;
+    cursor: pointer;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+  }
 
-    li {
-      display: inline;
-      margin: 0 16px;
+  nav {
+    ul {
+      list-style: none;
+      padding: 0;
+      display: flex;
+      justify-content: center;
 
-      a {
-        color: $link-color;
-        text-decoration: none;
+      li {
+        margin: 0 16px;
 
-        &:hover {
-          text-decoration: underline;
+        a {
+          color: $link-color;
+          text-decoration: none;
+
+          &:hover {
+            text-decoration: underline;
+          }
         }
       }
+    }
+  }
+
+  @media (max-width: 768px) {
+    #menu-toggle {
+      display: block;
+    }
+
+    nav {
+      position: absolute;
+      top: 60px;
+      right: 0;
+      background-color: $header-bg;
+      width: 200px;
+      transform: translateX(100%);
+      transition: transform 0.3s ease-in-out;
+
+      ul {
+        flex-direction: column;
+        padding: 10px;
+
+        li {
+          margin: 10px 0;
+        }
+      }
+    }
+
+    nav.active {
+      transform: translateX(0);
     }
   }
 }
