@@ -9,32 +9,56 @@
   <body>
     <header>
       <h1>My Projects</h1>
-      <nav>
+      <button id="menu-toggle" aria-label="Toggle Navigation">&#9776;</button>
+      <nav id="nav-menu">
         <ul>
           <li><a href="index.html">Home</a></li>
           <li><a href="about.html">About Me</a></li>
         </ul>
       </nav>
     </header>
+
     <main>
-      <section>
+      <section id="projects">
         <h2>Projects</h2>
-        <ul>
-          <li>
-            <h3>Project 1</h3>
-            <p>Description of your first project.</p>
-          </li>
-          <li>
-            <h3>Project 2</h3>
-            <p>Description of second project.</p>
-          </li>
-        </ul>
+        <div class="project-cards">
+          <div class="project-card">
+            <h3>CodeSpiritSimulations</h3>
+            <p>Description of project.</p>
+            <a
+              href="https://github.com/codespirityash/CodeSpiritSimulations"
+              target="_blank"
+              >View Project
+            </a>
+          </div>
+          <div class="project-card">
+            <h3>Todo-list-with-server</h3>
+            <p>Description of project.</p>
+            <a
+              href="https://github.com/codespirityash/vanilla-todo-with-server"
+              target="_blank"
+              >View Project</a
+            >
+          </div>
+          <div class="project-card">
+            <h3>Vite-Vanilla-Portfolio</h3>
+            <p>Description of project.</p>
+            <a
+              href="https://github.com/codespirityash/vite-vanilla-portfolio"
+              target="_blank"
+              >View Project</a
+            >
+          </div>
+        </div>
       </section>
     </main>
+
     <footer>
       <p>
         Let's connect! <a href="mailto:codespirityash@gmail.com">Email Me</a>
       </p>
     </footer>
+
+    <script type="module" src="/src/main.js"></script>
   </body>
 </html>
