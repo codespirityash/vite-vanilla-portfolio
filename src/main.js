@@ -1,6 +1,4 @@
-import Carousel from "./lib/Carousel";
-import DropDown from "./lib/DropDown";
-import Menu from "./lib/Menu";
+import { Carousel, DropDown, Menu } from "./lib";
 import "./styles/main.scss";
 
 const carousel = new Carousel();
