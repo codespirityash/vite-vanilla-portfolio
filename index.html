@@ -4,33 +4,257 @@
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>My Portfolio</title>
-    <link rel="stylesheet" href="src/dist/css/main.css" />
+    <title>Yash Lakhani - Portfolio</title>
+    <link rel="stylesheet" href="/dist/css/main.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
   </head>
   <body>
+    <!------------------- Navbar ----------------->
     <header>
-      <h1>My Portfolio</h1>
+      <h1>Yash Lakhani</h1>
       <button id="menu-toggle" aria-label="Toggle Navigation">&#9776;</button>
       <nav id="nav-menu">
         <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="about.html">About Me</a></li>
-          <li><a href="projects.html">Projects</a></li>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About Me</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#contact">Contact</a></li>
         </ul>
       </nav>
     </header>
-    <main>
-      <section>
-        <h2>Welcome</h2>
-        <p>Welcome to my Portfolio!</p>
-        <p>Use the navigation above to explore the portfolio.</p>
-      </section>
-    </main>
+
+    <!-------------- Home Section --------------------->
+    <section id="home">
+      <div class="home-content">
+        <div class="avatar">
+          <img src="src/images/yashavatar.webp" alt="Yash Lakhani Avatar" />
+        </div>
+        <div class="home-text">
+          <h2>Hi, I'm Yash Lakhani</h2>
+          <p>
+            An independent and self-motivated graduate having a passion for
+            learning and applying new technologies and a software enthusiast who
+            is willing to explore a wide variety of opportunities that can help
+            me gain perspective.
+          </p>
+          <div class="social-links">
+            <a href="https://www.linkedin.com/in/lakhani-yash" target="_blank">
+              <img src="src\images\Linkedin.png" alt="LinkedIn" />
+            </a>
+            <a href="https://github.com/codespirityash" target="_blank">
+              <img src="src\images\Github.png" alt="GitHub" />
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!------------------ About Me Section ------------------------------>
+    <section id="about">
+      <h2>About Me</h2>
+      <div class="about-content">
+        <div class="qualifications">
+          <h3>> Qualifications</h3>
+          <p>
+            B.E in Computer Engineering, Vivekanand Education Society’s
+            Institute of Technology (July 2023)
+          </p>
+        </div>
+        <div class="certificates">
+          <h3>> Certificates</h3>
+          <ul>
+            <li>
+              <a
+                href="https://courses.itvedant.skillsnetwork.site/certificates/eeeb4b12872a45c4a99ab72b1f4796ad"
+                target="_blank"
+                >Python for Web Development</a
+              >
+            </li>
+            <li>
+              <a
+                href="https://learn.skillnation.in/your-certificate/7A6959AD48-7F05394280-15108BFB2/"
+                target="_blank"
+                >SQL</a
+              >
+            </li>
+          </ul>
+        </div>
+        <a
+          href="https://drive.google.com/file/d/1IV2xH9WEtMS4zAWtlNzzPiqZwFVmjW7b/view?usp=sharing"
+          download
+          class="download-cv"
+        >
+          Download CV
+        </a>
+      </div>
+    </section>
+
+    <!------------------- Projects Section ------------------------------->
+    <section id="projects">
+      <h2>Projects</h2>
+      <div class="projects-carousel">
+        <button class="carousel-arrow left-arrow" onclick="prevProject()">
+          <i class="fas fa-chevron-left"></i>
+        </button>
+        <div class="project-cards">
+          <div class="project-card active">
+            <h3>Clothing Ecommerce Store with Django</h3>
+            <p>
+              A Dynamic and User-friendly clothing Ecommerce platform developed
+              with Bootstrap and Django for an enhanced online shopping
+              experience.<br />
+              Tools - Django, Bootstrap, Python , MySQL
+            </p>
+            <a
+              href="https://github.com/codespirityash/CodeSpiritSimulations"
+              target="_blank"
+              class="view-project"
+              >View Project
+            </a>
+          </div>
+          <div class="project-card">
+            <h3>Secured Repository of Health Reports∙</h3>
+            <p>
+              A repository to store/edit/update medical reports online for
+              consumers/users.<br />
+              Tools - ReactJS , NodeJs , Express , MySQL
+            </p>
+            <a
+              href="https://github.com/codespirityash/vanilla-todo-with-server"
+              target="_blank"
+              class="view-project"
+              >View Project</a
+            >
+          </div>
+          <div class="project-card">
+            <h3>Shodhak - Credit Card Fraud Detection System.</h3>
+            <p>
+              A Fraud Detection System used to detect fraudulent credit card
+              transactions designed with machine learning algorithms.<br />
+              Technologies- HTML, CSS , JavaScript, Python,Flask , Pickle.
+            </p>
+            <a
+              href="https://github.com/codespirityash/vite-vanilla-portfolio"
+              target="_blank"
+              class="view-project"
+              >View Project</a
+            >
+          </div>
+        </div>
+        <button class="carousel-arrow right-arrow" onclick="nextProject()">
+          <i class="fas fa-chevron-right"></i>
+        </button>
+      </div>
+    </section>
+
+    <!-------- Skills Section --------------------->
+    <section id="skills">
+      <h2>Skills</h2>
+      <div class="skills-container">
+        <div class="skill-subsection">
+          <button class="skill-title" onclick="toggleDropdown(this)">
+            <i class="fas fa-code"></i> Languages
+            <i class="fas fa-chevron-down"></i>
+          </button>
+          <ul class="skill-dropdown">
+            <li>Python</li>
+            <li>Java</li>
+          </ul>
+        </div>
+        <div class="skill-subsection">
+          <button class="skill-title" onclick="toggleDropdown(this)">
+            <i class="fas fa-globe"></i> Web Technologies
+            <i class="fas fa-chevron-down"></i>
+          </button>
+          <ul class="skill-dropdown">
+            <li>HTML</li>
+            <li>CSS</li>
+            <li>JavaScript</li>
+            <li>TypeScript</li>
+            <li>DOM</li>
+          </ul>
+        </div>
+        <div class="skill-subsection">
+          <button class="skill-title" onclick="toggleDropdown(this)">
+            <i class="fas fa-cogs"></i> Frameworks
+            <i class="fas fa-chevron-down"></i>
+          </button>
+          <ul class="skill-dropdown">
+            <li>ReactJS</li>
+            <li>Firebase</li>
+          </ul>
+        </div>
+        <div class="skill-subsection">
+          <button class="skill-title" onclick="toggleDropdown(this)">
+            <i class="fas fa-database"></i> Databases
+            <i class="fas fa-chevron-down"></i>
+          </button>
+          <ul class="skill-dropdown">
+            <li>MySQL</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+    <!----------------- Contact Section --------------------------->
+    <section id="contact">
+      <h2>Contact Me</h2>
+      <form id="contact-form">
+        <div class="form-group">
+          <label for="name">Name</label>
+          <input type="text" id="name" name="name" required />
+        </div>
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" required />
+        </div>
+        <div class="form-group">
+          <label for="message">Message</label>
+          <textarea id="message" name="message" rows="5" required></textarea>
+        </div>
+        <button type="submit">Send Message</button>
+      </form>
+    </section>
+
+    <!-------------------- Footer -------------------------------->
     <footer>
-      <p>
-        Let's connect! <a href="mailto:codespirityash@gmail.com">Email Me</a>
-      </p>
+      <div class="footer-columns">
+        <div class="footer-column">
+          <h3>Yash Lakhani</h3>
+        </div>
+        <div class="footer-column">
+          <h3>Quick Links</h3>
+          <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About Me</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-column">
+          <h3>Connect</h3>
+          <div class="social-links">
+            <a href="https://www.linkedin.com/in/lakhani-yash" target="_blank">
+              <img src="src\images\Linkedin.png" alt="LinkedIn" />
+            </a>
+            <a href="https://github.com/codespirityash" target="_blank">
+              <img src="src\images\Github.png" alt="GitHub" />
+            </a>
+          </div>
+        </div>
+      </div>
     </footer>
+
     <script type="module" src="/src/main.js"></script>
+    <script type="module" src="/src/contact.js"></script>
+    <script type="module" src="/src/projects.js"></script>
   </body>
 </html>
