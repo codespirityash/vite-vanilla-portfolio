@@ -1,4 +1,4 @@
-export class Menu {
+export default class Menu {
     menuToggle = document.getElementById("menu-toggle");
     navMenu = document.getElementById("nav-menu");
 
