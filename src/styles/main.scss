@@ -1,5 +1,10 @@
-@import "reset";
-@import "variables";
+@use "variables";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
 body {
   font-family: "Poppins", sans-serif;
@@ -23,7 +28,7 @@ header {
   z-index: 1000;
 
   h1 {
-    color: $header-title-color;
+    color: variables.$header-title-color;
     font-size: 24px;
   }
 
@@ -32,7 +37,7 @@ header {
     font-size: 24px;
     background: none;
     border: none;
-    color: $header-title-color;
+    color: variables.$header-title-color;
     cursor: pointer;
   }
 
@@ -67,7 +72,7 @@ header {
       position: absolute;
       top: 60px;
       right: 0;
-      background-color: $header-bg;
+      background-color: variables.$header-bg;
       width: 200px;
       transform: translateX(100%);
       transition: transform 0.3s ease-in-out;
@@ -226,7 +231,7 @@ section {
           margin: 10px 0;
 
           a {
-            color: $link-color;
+            color: variables.$link-color;
             text-decoration: none;
 
             &:hover {
@@ -240,7 +245,7 @@ section {
     .download-cv {
       display: inline-block;
       padding: 10px 20px;
-      background-color: $link-color;
+      background-color: variables.$link-color;
       color: #fff;
       text-decoration: none;
       border-radius: 4px;
@@ -248,7 +253,7 @@ section {
       transition: background-color 0.3s ease;
 
       &:hover {
-        background-color: darken($link-color, 10%);
+        background-color: adjust(variables.$link-color, 10%);
       }
     }
   }
@@ -267,7 +272,7 @@ section {
       background: none;
       border: none;
       font-size: 24px;
-      color: $link-color;
+      color: variables.$link-color;
       cursor: pointer;
 
       &.left-arrow {
@@ -279,7 +284,7 @@ section {
       }
 
       &:hover {
-        color: darken($link-color, 10%);
+        color: adjust(variables.$link-color, 10%);
       }
     }
 
@@ -323,7 +328,7 @@ section {
           transition: background-color 0.3s ease;
 
           &:hover {
-            background-color: darken(#4caf50, 10%);
+            background-color: adjust(#4caf50, 10%);
           }
         }
       }
@@ -427,8 +432,8 @@ section {
 
         &:focus {
           outline: none;
-          border-color: $link-color;
-          box-shadow: 0 0 5px rgba($link-color, 0.5);
+          border-color: variables.$link-color;
+          box-shadow: 0 0 5px rgba(variables.$link-color, 0.5);
         }
       }
 
@@ -440,7 +445,7 @@ section {
     button {
       display: inline-block;
       padding: 10px 20px;
-      background-color: $link-color;
+      background-color: variables.$link-color;
       color: #fff;
       border: none;
       border-radius: 4px;
@@ -449,7 +454,7 @@ section {
       transition: background-color 0.3s ease;
 
       &:hover {
-        background-color: darken($link-color, 10%);
+        background-color: adjust(variables.$link-color, 10%);
       }
     }
   }
